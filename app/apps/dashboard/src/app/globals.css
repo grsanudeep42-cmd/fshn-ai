@@ -1,0 +1,173 @@
+@import '@mantine/core/styles.css';
+@import '@mantine/charts/styles.css';
+@import '@mantine/notifications/styles.css';
+@import '@mantine/dates/styles.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #F5F2ED;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Thin scrollbar — desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4C9B8;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9A8E7C;
+  }
+}
+
+/* Mobile: no scrollbar */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid #C9A84C;
+  outline-offset: 2px;
+}
+
+/* Sidebar nav link hover */
+.sidebar-link {
+  transition: background 150ms ease, color 150ms ease;
+}
+.sidebar-link:hover {
+  background: rgba(201, 168, 76, 0.06) !important;
+}
+
+/* KPI card hover lift */
+.kpi-card {
+  transition: box-shadow 200ms ease, transform 200ms ease;
+  cursor: default;
+}
+@media (min-width: 768px) {
+  .kpi-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    transform: translateY(-1px);
+  }
+}
+
+/* Table row hover */
+.dash-table tbody tr:hover td {
+  background: #FAF8F5 !important;
+  transition: background 100ms ease;
+}
+
+/* Overflow table container — horizontal scroll on mobile */
+.dash-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Animation — fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.3s ease both;
+}
+
+.page-content {
+  animation: fadeInUp 0.2s ease both;
+}
+
+/* Status dot pulse */
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(46,125,50,0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 4px rgba(46,125,50,0); }
+}
+
+.status-dot-active {
+  animation: pulse-green 2.5s ease-in-out infinite;
+}
+
+/* Mobile: stack 2-col grids to 1-col */
+@media (max-width: 480px) {
+  /* Ensure no content overflows */
+  main {
+    overflow-x: hidden;
+  }
+}
+
+/* Safe area insets for iPhone notch */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Charts grid — desktop: 3 col span, mobile: 1 col */
+.charts-grid {
+  grid-template-columns: 1fr !important;
+}
+@media (min-width: 768px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* On mobile, span-2 cards become full width */
+@media (max-width: 767px) {
+  .charts-grid > * {
+    grid-column: span 1 !important;
+  }
+}
+
+/* KPI card value — smaller on mobile */
+@media (max-width: 480px) {
+  .kpi-value {
+    font-size: 20px !important;
+  }
+  .kpi-label {
+    font-size: 9px !important;
+  }
+}
+
+/* Hide hamburger on desktop — sidebar is always visible as a rail */
+@media (min-width: 1024px) {
+  .topbar-hamburger {
+    display: none !important;
+  }
+}
+
+/* Sidebar rail icon hover bg on desktop */
+@media (min-width: 1024px) {
+  .sidebar-link:hover {
+    background: rgba(201, 168, 76, 0.08) !important;
+  }
+}
+
+
