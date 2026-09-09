@@ -1,0 +1,39 @@
+name = "myfashion-worker"
+main = "src/index.ts"
+compatibility_date = "2024-04-03"
+compatibility_flags = ["nodejs_compat"]
+
+# ==============================================================================
+# BINDINGS
+# ==============================================================================
+
+# Hyperdrive binding for connection pooling to PostgreSQL (Supabase)
+# In production, create via: wrangler hyperdrive create myfashion-hyperdrive --connection-string="<SUPABASE_DB_URL>"
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "PLACEHOLDER_HYPERDRIVE_ID"
+
+# Cloudflare R2 Bucket binding for garment images, customer photos, and try-on output assets
+# In production, create via: wrangler r2 bucket create myfashion-assets
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "myfashion-assets-placeholder"
+
+# ==============================================================================
+# ENVIRONMENT VARIABLES & SECRETS
+# ==============================================================================
+# Non-sensitive variables can be specified below:
+[vars]
+ENVIRONMENT = "development"
+
+# SENSITIVE SECRETS (Do NOT hardcode secrets here):
+# Cloudflare Worker secrets must be configured via wrangler CLI or Cloudflare dashboard:
+#   wrangler secret put SUPABASE_DB_URL
+#   wrangler secret put MONGO_DATA_API_URL
+#   wrangler secret put MONGO_DATA_API_KEY
+#   wrangler secret put VTON_API_KEY
+#   wrangler secret put VTON_API_URL
+#   wrangler secret put OTP_PROVIDER_API_KEY
+#
+# For local development with `wrangler dev`, copy `.dev.vars.example` to `.dev.vars`
+# and fill in the values.

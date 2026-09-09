@@ -1,0 +1,16 @@
+# Local development secrets for Cloudflare Worker (`wrangler dev`)
+# Copy this file to `.dev.vars` (which is gitignored) and add real values for local testing.
+
+# Supabase database connection string (used by Hyperdrive or direct connection)
+SUPABASE_DB_URL="postgresql://postgres:[PASSWORD]@[HOST]:5432/postgres"
+
+# MongoDB Data API credentials
+MONGO_DATA_API_URL="https://data.mongodb-api.com/app/[APP_ID]/endpoint/data/v1"
+MONGO_DATA_API_KEY="[MONGO_DATA_API_KEY_PLACEHOLDER]"
+
+# Virtual Try-On API (FASHN / Nano Banana / custom VTON)
+VTON_API_KEY="[VTON_API_KEY_PLACEHOLDER]"
+VTON_API_URL="https://api.fashn.ai/v1"
+
+# SMS OTP Provider API (e.g. Fast2SMS / Twilio / MSG91)
+OTP_PROVIDER_API_KEY="[OTP_PROVIDER_API_KEY_PLACEHOLDER]"
