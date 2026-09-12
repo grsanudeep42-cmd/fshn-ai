@@ -1,0 +1,91 @@
+Customer reaches an Offline store
+next approaches sales man person
+so they choose an 10 picks 
+staff or sales person asks them to show how they look so they can choose better ones which suit them , if they say yes
+they take one picture of the customer or if they want to apply an model then no need
+then staff takes picture of all the 10 items , if they already have their images , then upload in our app we provide to Shop staff
+then in the app it generates the images for display
+staff can view them to Customers for faster pick their good ones and try much more items.
+
+Best cases where this helps are:
+1. 10k + rate Sarees 
+usually people ask them to drape the saree so they can know its good or not , but they cant try to ask all the 10 sarees , so not possible so they need to pick limitedly and choose from them
+and even shop people much don't like to do that as saree can get damaged or they need to fold again or next time people will ask is this fresh one
+so our solution helps this section very well
+2. Children Dresses
+so for small children we can wear dress so many times right , this helps for that problem so well
+3. Men or Women basic dress matching
+so matching dresses are so needed for current trends , like no one would love to try out many dresses and may have low time , so our app can help them see themselves before and pick to trail 
+so in almost all cases we can reduce work of trail rooms and dress damages and people easiness to pick , more items will  be tried and could help in sales boost
+from shop guy perspective and customers problems
+
+So right now we have three ways to get service
+1. Fashn.ai latest model which costs 0.075 per image , if in bulk 0.045-0.065 per image
+2. Fashn.ai old model released online , this good for shirts , tshirts , pants but not in sareers or complex designs , we can run this locally 
+3. Nano banana or other models which costs around 0.03 per image 
+
+So we actually provide service to shop members by
+1. App Maintenance and Service plans 
+I have example idea of 2k Per month for 1 shop , 10 devices + 100 credits
+5k per month for 1 shop , 50 devices + 100 credits
+2. Top up system for our app credits
+which can be used to generate images 
+we offer them at rate of 8 rupee per credit for less number of top up
+5 rupee per credit for bulk orders of credits
+
+
+
+AI points
+1. Trial room congestion during peak hours (festival season, weekends) — this app effectively adds "virtual trial room capacity."
+2. Staff time spent on garment handling (folding, ironing, hanging back up) instead of selling.
+3. Customer decision fatigue — physically trying more than 3-4 items is exhausting, so people often buy from a small, arbitrary subset rather than their actual best match.
+4. Sales opportunity loss — a customer who's tired from trying 3 sarees won't ask to see 4 more even if the shop has better options; a screen doesn't get tired.
+5. Risks & mitigations
+Technical risk: generation quality inconsistency, especially on sarees — mitigate with one-tap regenerate, staff-side quality check before showing customer.
+Adoption risk: staff reverting to old habits under time pressure — mitigate with training + making the app faster than manual draping, not just "an option."
+Margin risk: premium credit overuse — mitigated by your tiered credit system (already solved).
+Seasonal cash flow risk — already discussed, worth a line here too.
+
+Usage level	Images/month	Realistic for
+Low (occasional, testing it out)	~150	Small boutique, early adoption
+Medium (daily regular use)	~400–800	Mid-size shop, steady footfall
+High (peak season, festival/wedding rush)	~1,000–4,000	Any shop size during Oct–Feb
+
+₹2k plan shop (100 included credits: 90 normal + 10 premium):
+
+Usage	Extra credits needed	Top-up cost (small rate)	Top-up cost (bulk rate)	Total monthly cost (small / bulk)
+Low (150)	50	₹375	₹260	₹2,375 / ₹2,260
+Medium (500)	400	₹3,000	₹2,080	₹5,000 / ₹4,080
+High (1,200)	1,100	₹8,250	₹5,720	₹10,250 / ₹7,720
+
+₹5k plan shop (100 included credits: 70 normal + 30 premium):
+
+Usage	Extra credits needed	Top-up cost (small rate)	Top-up cost (bulk rate)	Total monthly cost (small / bulk)
+Low (800)	700	₹5,250	₹3,640	₹10,250 / ₹8,640
+Medium (2,000)	1,900	₹14,250	₹9,880	₹19,250 / ₹14,880
+High (4,000)	3,900	₹29,250	₹20,280	₹34,250 / ₹25,280
+
+Step 3: Does it still hold up as % of revenue?
+Shop segment	Revenue	Cost at high usage	% of revenue
+Small boutique	₹3–8 lakh	~₹7,700–10,250	1.3–3.4%
+Mid-size shop	₹10–25 lakh	~₹15,000–25,000	0.6–2.5%
+Large showroom	₹30L–1cr	~₹25,000–34,000	0.03–1.1%
+
+Costs
+Credit type	                       Cost per image	
+Normal (Nano Banana, ~$0.03)	          ~₹2.6	
+Premium (FASHN bulk, $0.045–0.065)	~₹3.9–5.7
+
+Money flow
+Credit type	Small top-up	Bulk top-up	Cost basis	Margin at bulk
+Normal	               ₹6	      ₹4	   ~₹2.6	~35–54%
+Premium	               ₹11	      ₹8	   ~₹5–6.5	~19–38%
+
+To add:
+1. Data privacy & consent (important gap — customer photos are sensitive)
+A written policy for: what happens to a customer's photo after generation (deleted immediately? stored for repeat visits with consent? for how long?).
+Explicit customer consent step in the flow — right now the flow says "if they say yes" for the photo, but the document should state what "yes" actually covers (one-time use vs. stored).
+A basic awareness note on India's data protection law (DPDP Act) as it applies to storing personal photos — worth a proper legal consult before wide rollout, but flag it in the doc now so it's not forgotten later.
+2. Competitive landscape
+Who else is doing VTON for Indian fashion or retail generally (there are a few Indian retail-AI players like Vue.ai, Fynd, and others worth checking current positioning on) and how you're different — your saree/complex-drape focus and offline-first staff workflow are your differentiators, so name them explicitly against competitors rather than assuming it's obvious.
+Why a shop would pick you over just asking customers to record a video trying clothes, or over doing nothing.
