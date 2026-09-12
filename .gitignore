@@ -3,6 +3,11 @@ node_modules/
 .pnp
 .pnp.js
 
+# Product documents (keep local only)
+*.docx
+*.doc
+*.pdf
+
 # Build outputs
 .next/
 out/
