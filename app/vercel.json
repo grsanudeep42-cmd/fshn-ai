@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build --workspace=dashboard",
+  "outputDirectory": "apps/dashboard/.next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
